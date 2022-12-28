@@ -8,7 +8,7 @@ import { links } from "../constants";
 //----------------------------------------------------------
 
 const Logo = () => (
-  <div className="flex flex-col w-4/5 md:w-auto justify-center items-center border-y border-y-whisper-white">
+  <div className="flex flex-col w-full md:w-auto justify-center items-center border-y border-y-whisper-white">
     <Link
       to="/"
       className="flex text-whisper-white hover:text-riptide-accent text-3xl font-oswald font-semibold pt-3.5"
@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-between sticky top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 rounded-xl border border-bunker-gray-500">
+      <div className="flex flex-row items-center justify-between sticky top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 rounded-xl border border-bunker-gray-500 z-50">
         <div className="flex flex-row items-center text-whisper-white">
           <button onClick={handleToggleNavMenu}>
             <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8" />
@@ -76,7 +76,7 @@ const Header = () => {
       </div>
       {toggleNavMenu && (
         <>
-          <div className="absolute bg-bunker-gray-900 bg-opacity-80 top-36 left-28 p-10 rounded-xl z-30">
+          <div className="absolute w-80 bg-bunker-gray-900 bg-opacity-80 top-24 md:top-32 left-2 xl:left-28 p-10 rounded-xl z-30">
             <Logo />
             <NavLinks />
           </div>
