@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-between sticky top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 rounded-xl border border-bunker-gray-500 z-50">
+      <div className="flex flex-row items-center justify-between sticky top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 rounded-xl border border-bunker-gray-500 z-30">
         <div className="flex flex-row items-center text-whisper-white">
           <button onClick={handleToggleNavMenu}>
             <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8" />
@@ -76,13 +76,13 @@ const Header = () => {
       </div>
       {toggleNavMenu && (
         <>
-          <div className="absolute w-80 bg-bunker-gray-900 bg-opacity-80 top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-10 rounded-xl z-30">
+          <div className="absolute w-80 bg-bunker-gray-900 top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-10 rounded-xl z-50">
             <Logo />
             <NavLinks />
           </div>
           <div
             onClick={(e) => setToggleNavMenu(!toggleNavMenu)}
-            className="absolute top-0 w-full h-screen bg-bunker-gray-800 bg-opacity-40 z-0"
+            className="absolute top-0 w-full h-screen bg-bunker-gray-800 bg-opacity-70 blur-3xl z-40"
           />
         </>
       )}

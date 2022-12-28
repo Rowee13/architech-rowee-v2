@@ -18,6 +18,18 @@ import figmaLogo from "./tech-stack/figma.png";
 import affdesignerLogo from "./tech-stack/affdesigner.png";
 import affphotoLogo from "./tech-stack/affphoto.png";
 
+//? ======================== card image assets ======================== ?//
+import reactCodesandboxImg from "./react-bootcamp/react-in-codesandbox.png";
+import reactBootcampImg from "./react-bootcamp/react-bootcamp-projects.gif";
+
+//? ===================== react bootcamp assets ===================== ?//
+import pokedexDemo from "./react-bootcamp/pokedex-demo.gif";
+import hangmanDemo from "./react-bootcamp/hangman-demo.gif";
+import lightsOutDemo from "./react-bootcamp/lights-out-game-demo.gif";
+import todolistDemo from "./react-bootcamp/todolist-app-demo.gif";
+import yahtzeeDemo from "./react-bootcamp/yahtzee-game-demo.gif";
+import dadJokesDemo from "./react-bootcamp/dad-jokes-app-demo.gif";
+
 //? ======================== exports ======================== ?//
 export {
   htmlLogo,
@@ -38,4 +50,12 @@ export {
   figmaLogo,
   affdesignerLogo,
   affphotoLogo,
+  reactCodesandboxImg,
+  reactBootcampImg,
+  pokedexDemo,
+  hangmanDemo,
+  lightsOutDemo,
+  todolistDemo,
+  yahtzeeDemo,
+  dadJokesDemo,
 };
