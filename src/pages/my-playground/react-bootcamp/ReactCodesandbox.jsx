@@ -9,28 +9,28 @@ import Layout from "../../../components/Layout";
 const ReactCodesandbox = () => {
   return (
     <Layout>
-      <article>
-        <div className="flex flex-col h-60 lg:h-52 justify-end text-justify pb-8 lg:pb-10 px-7 bg-bunker-gray-800 text-whisper-white">
+      <article className="font-outfit text-whisper-white">
+        <div className="flex flex-col justify-end text-justify pb-8 lg:pb-10 ">
           <h1 className="font-oswald uppercase font-bold text-3xl lg:text-4xl">
             Learning react
           </h1>
-          <p className="font-lato lg:text-xl pt-1">
+          <p className="lg:text-xl pt-2 text-zinc-400">
             These are React Bootcamp exercises in Udemy. <br />
             Course Title: The Modern React Bootcamp (Hooks, Context, NextJS,
             Router) by Colt Steele
           </p>
         </div>
 
-        <div className="bg-gradient-to-b from-bunker-gray-600 to-bunker-gray-900 h-full p-7 font-lato text-md text-whisper-white">
+        <div className="h-full pt-7 text-md text-whisper-white">
           <Link to="/my-playground" className="btn btn-outline mb-6">
             <IoArrowBackOutline />
             <button className="pl-3">Back</button>
           </Link>
           <div className="lg:w-4/5">
-            <h1 className="font-lato font-extrabold text-2xl lg:text-3xl">
+            <h1 className="font-bold text-2xl lg:text-3xl">
               React bootcamp course exercises
             </h1>
-            <p className="text-justify py-5">
+            <p className="text-justify py-5 text-zinc-400">
               This ReactJS course by Colt Steele is good, but because it is
               outdated, I encountered a lot of problems along the way. There are
               exercises in the course that I didn't include here. The topics
@@ -44,7 +44,7 @@ const ReactCodesandbox = () => {
                 here.
               </Link>
             </p>
-            <p className="text-justify pt-4">
+            <p className="text-justify pt-4 text-zinc-400">
               All exercises and course projects are written as class-based
               components. Since I want and need to practice the current practice
               of using hooks, I converted all of these codes. If you see some
@@ -62,7 +62,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Simple state handling</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 This app lets you generate a random number and count the number
                 of your guesses until you get the lucky number 7. If you can't
                 see the code, slide the window from left to right by clicking
@@ -70,7 +70,7 @@ const ReactCodesandbox = () => {
                 added a reset button, which you can see in the resetNumber
                 function. The reset button will only appear once you win.
               </p>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>Use of React Hook useState</li>
@@ -92,7 +92,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Changing Color Boxes</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 Each box in this app changes color with every click. You can
                 play and make it better by adding more colors. That will improve
                 the color generation, I think. 😅 This simple exercise allowed
@@ -108,11 +108,11 @@ const ReactCodesandbox = () => {
                 which is a built-in function in Javascript.
               </p>
               <br />
-              <i>
+              <i className="text-zinc-400">
                 Open preview in new window for better look over in the entire
                 output
               </i>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>Use of React Hook useState</li>
@@ -144,7 +144,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Lotto Draw</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 This one is similar to the color boxes exercise. It shows how
                 convenient a reusable component is. It also uses the Javascript{" "}
                 <code className="text-riptide-accent"> map()</code> method to
@@ -160,11 +160,11 @@ const ReactCodesandbox = () => {
                 names instead of maxNum and numBalls. 😄
               </p>
               <br />
-              <i>
+              <i className="text-zinc-400">
                 Open preview in new window for better look over in the entire
                 output
               </i>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>Use of React Hook useState</li>
@@ -194,7 +194,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Color Box Maker</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 This card dealer API exercise is written in the class-based
                 component. Unlike other exercises, I haven't completely
                 converted this to a function-based component that uses React
@@ -211,11 +211,11 @@ const ReactCodesandbox = () => {
                 exercise uses the deckofcardsapi.{" "}
               </p>
               <br />
-              <i>
+              <i className="text-zinc-400">
                 Open preview in new window for better look over in the entire
                 output
               </i>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>Object as initial value to the state</li>
@@ -240,7 +240,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Card Dealer API</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 This card dealer api exercise is still in class-based component.
                 Unlike other exercises, I haven't completely converted this to
                 function-based component that uses React Hooks. I still haven't
@@ -257,11 +257,11 @@ const ReactCodesandbox = () => {
                 exercise, we use the deckofcardsapi.{" "}
               </p>
               <br />
-              <i>
+              <i className="text-zinc-400">
                 Open preview in new window for better look over in the entire
                 output
               </i>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>Use of ComponentDidMount to fetch data from an api</li>
@@ -287,7 +287,7 @@ const ReactCodesandbox = () => {
             {/* one div per codesandbox */}
             <div className="py-12">
               <h3 className="font-bold text-2xl pb-6">Dice Roller</h3>
-              <p className="text-justify">
+              <p className="text-justify text-zinc-400">
                 This exercise is a bit similar to Color Box Maker except for the
                 input state handling part. This also uses the object as the
                 state's initial value. One big lesson we can get out of this is
@@ -304,11 +304,11 @@ const ReactCodesandbox = () => {
                 Hooks, the undeclared initial state will be gone.{" "}
               </p>
               <br />
-              <i>
+              <i className="text-zinc-400">
                 Open preview in new window for better look over in the entire
                 output
               </i>
-              <div className="py-6">
+              <div className="py-6 text-zinc-400">
                 <h4 className="font-semibold text-lg pb-2">Learnings:</h4>
                 <ul className="list-disc list-inside pl-3">
                   <li>How to handle object as initial state value</li>
@@ -332,9 +332,9 @@ const ReactCodesandbox = () => {
             </div>
           </div>
 
-          <div className="text-whisper-white font-lato py-20">
+          <div className="text-whisper-white py-20">
             <h3 className="text-3xl lg:text-4xl font-bold">That's it!</h3>
-            <p className="text-xl font-medium pt-3">
+            <p className="text-xl pt-3 text-zinc-400">
               I hope you enjoy browsing this simple exercises in react.
             </p>
           </div>
