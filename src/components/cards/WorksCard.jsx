@@ -1,23 +1,22 @@
 import { Link } from "react-router-dom";
-import { reactCodesandboxImg } from "../../assets";
 
 //----------------------------------------------------------
 
-const WorksCard = ({ workId, workTitle, workDescription }) => {
+const WorksCard = ({ workId, workImg, workTitle, workDescription }) => {
   return (
     <div className="flex flex-col w-4/12 rounded-xl bg-bunker-gray-800">
       <div className="overflow-hidden rounded-t-xl">
         <img
-          src={reactCodesandboxImg}
-          alt="card-img"
+          src={workImg}
+          alt={workId}
           className="object-cover object-center"
         />
       </div>
-      <div className="pt-5 px-8">
+      <div className="pt-5 px-8 h-36">
         <h3 className="font-extrabold text-xl pb-3 text-whisper-white truncate">
           {workTitle}
         </h3>
-        <p className="text-zinc-400 text-sm text-justify line-clamp-3 pb-4">
+        <p className="text-zinc-400 text-sm text-justify line-clamp-3 pb-4 h-16">
           {workDescription}
         </p>
       </div>

@@ -1,6 +1,8 @@
 import Layout from "../../components/Layout";
 import WorksCard from "../../components/cards/WorksCard";
 
+import { reactCodesandboxImg, reactBootcampImg } from "../../assets";
+
 //----------------------------------------------------------
 
 const MyPlayground = () => {
@@ -18,13 +20,20 @@ const MyPlayground = () => {
         </p>
         <div className="pt-16 flex flex-1 flex-col">
           <h3 className="font-semibold text-xl pb-5">React Bootcamp</h3>
-          <WorksCard
-            workId="react-in-codesandbox"
-            workTitle="React Bootcamp exercise in Codesandbox"
-            workDescription="These are react bootcamp exercises I did in CodeSandbox. I think,
-            CodeSandbox is an amazing browser-based tool to practice your coding
-            skills."
-          />
+          <div className="flex flex-row gap-x-4">
+            <WorksCard
+              workId="react-in-codesandbox"
+              workImg={reactCodesandboxImg}
+              workTitle="React Bootcamp exercise in Codesandbox"
+              workDescription="These are react bootcamp exercises I did in CodeSandbox. I think, CodeSandbox is an amazing browser-based tool to practice your coding skills."
+            />
+            <WorksCard
+              workId="react-bootcamp-projects"
+              workImg={reactBootcampImg}
+              workTitle="React Bootcamp course projects"
+              workDescription="These are react bootcamp course projects. Each projects have its own github repo and deployed on gh-pages."
+            />
+          </div>
         </div>
       </div>
     </Layout>

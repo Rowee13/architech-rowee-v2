@@ -10,7 +10,7 @@ const ReactCodesandbox = () => {
   return (
     <Layout>
       <article className="font-outfit text-whisper-white">
-        <div className="flex flex-col justify-end text-justify pb-8 lg:pb-10 ">
+        <div className="flex flex-col justify-end text-justify pb-8 lg:pb-10">
           <h1 className="font-oswald uppercase font-bold text-3xl lg:text-4xl">
             Learning react
           </h1>

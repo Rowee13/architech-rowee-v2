@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MyPlayground from "./pages/my-playground/MyPlayground";
 import ReactCodesandbox from "./pages/my-playground/react-bootcamp/ReactCodesandbox";
+import ReactBootcampProjects from "./pages/my-playground/react-bootcamp/ReactBootcampProjects";
 import "./App.css";
 
 //----------------------------------------------------------
@@ -19,6 +20,10 @@ const AppRoutes = () => {
         <Route path="/my-playground">
           <Route index element={<MyPlayground />} />
           <Route path="react-in-codesandbox" element={<ReactCodesandbox />} />
+          <Route
+            path="react-bootcamp-projects"
+            element={<ReactBootcampProjects />}
+          />
         </Route>
       </Routes>
     </div>
