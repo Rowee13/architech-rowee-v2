@@ -31,6 +31,7 @@ module.exports = {
         shortstack: ["Short Stack", "handwriting"],
         lato: ["Lato", "sans-serif"],
         spacegrotesk: ["Space Grotesk", "display"],
+        outfit: ["Outfit", "sans-serif"],
       },
       boxShadow: {
         "nav-shadow": "0 0 2px 3px rgba(147, 225, 216, 0.5)",
