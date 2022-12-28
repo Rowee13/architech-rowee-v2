@@ -7,6 +7,7 @@ module.exports = {
         "2xs": "280px",
         xs: "360px",
         sm: "412px",
+        md: "717px",
       },
       colors: {
         "whisper-white": "#E5E5E5",
