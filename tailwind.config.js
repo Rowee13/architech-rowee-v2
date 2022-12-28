@@ -27,7 +27,15 @@ module.exports = {
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
+        petitformal: ["Petit Formal Script", "handwriting"],
+        shortstack: ["Short Stack", "handwriting"],
+        lato: ["Lato", "sans-serif"],
         spacegrotesk: ["Space Grotesk", "display"],
+      },
+      boxShadow: {
+        "nav-shadow": "0 0 2px 3px rgba(147, 225, 216, 0.5)",
+        "card-shadow": "0 0 2px 7px rgba(147, 225, 216, 0.25)",
+        "navcontainer-shadow": "0 0 55px 0 rgba(147,225,216,0.70)",
       },
     },
   },
