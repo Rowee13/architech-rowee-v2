@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
+        spacegrotesk: ["Space Grotesk", "display"],
       },
     },
   },

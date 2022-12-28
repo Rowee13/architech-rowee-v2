@@ -7,7 +7,7 @@ import "./App.css";
 
 const AppRoutes = () => {
   return (
-    <div className="flex flex-col w-full bg-bunker-gray-700">
+    <div className="flex flex-col w-full bg-bunker-gray-800">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
