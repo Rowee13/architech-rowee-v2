@@ -37,7 +37,10 @@ module.exports = {
         "card-shadow": "0 0 2px 7px rgba(147, 225, 216, 0.25)",
         "navcontainer-shadow": "0 0 55px 0 rgba(147,225,216,0.70)",
       },
+      backgroundImage: {
+        "mainbg-image": "url('./assets/bg/dark-brick-wall.png')",
+      },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [require("@tailwindcss/line-clamp"), require("daisyui")],
 };

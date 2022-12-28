@@ -76,7 +76,7 @@ const Header = () => {
       </div>
       {toggleNavMenu && (
         <>
-          <div className="absolute w-80 bg-bunker-gray-900 bg-opacity-80 top-24 md:top-32 left-2 xl:left-28 p-10 rounded-xl z-30">
+          <div className="absolute w-80 bg-bunker-gray-900 bg-opacity-80 top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-10 rounded-xl z-30">
             <Logo />
             <NavLinks />
           </div>

@@ -8,7 +8,7 @@ import "./App.css";
 
 const AppRoutes = () => {
   return (
-    <div className="flex flex-col w-full bg-bunker-gray-800">
+    <div className="flex flex-col w-full bg-bunker-gray-800 bg-mainbg-image">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-me" element={<About />} />
