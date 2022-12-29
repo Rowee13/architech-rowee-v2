@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
-import { RiMoonClearFill } from "react-icons/ri";
+import { RiSunFill } from "react-icons/ri";
+// RiMoonClearFill,
 
 import { links } from "../constants";
 
@@ -73,7 +74,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center justify-center rounded-full w-6 h-6 md:w-9 md:h-9 m-5 lg:m-8 bg-bunker-gray-400 cursor-pointer hover:bg-bunker-gray-100">
-          <RiMoonClearFill className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-800" />
+          <RiSunFill className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-800" />
         </div>
       </div>
       {toggleNavMenu && (

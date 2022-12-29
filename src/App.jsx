@@ -7,6 +7,7 @@ import MyPlayground from "./pages/my-playground/MyPlayground";
 import ReactCodesandbox from "./pages/my-playground/react-bootcamp/ReactCodesandbox";
 import ReactBootcampProjects from "./pages/my-playground/react-bootcamp/ReactBootcampProjects";
 import Blog from "./pages/blog/Blog";
+import Resources from "./pages/resources/Resources";
 import "./App.css";
 
 //----------------------------------------------------------
@@ -27,6 +28,7 @@ const AppRoutes = () => {
           />
         </Route>
         <Route path="/blog" element={<Blog />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </div>
   );
