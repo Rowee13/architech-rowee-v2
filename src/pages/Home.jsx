@@ -1,14 +1,13 @@
-import Layout from "../components/Layout";
+import Header from "../components/Header";
 
 //----------------------------------------------------------
 
 const Home = () => {
   return (
-    <Layout>
-      <main>
-        <h1>Home</h1>
-      </main>
-    </Layout>
+    <>
+      <Header />
+      <main className="h-screen overflow-hidden"></main>
+    </>
   );
 };
 

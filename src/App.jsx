@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import MyPlayground from "./pages/my-playground/MyPlayground";
 import ReactCodesandbox from "./pages/my-playground/react-bootcamp/ReactCodesandbox";
 import ReactBootcampProjects from "./pages/my-playground/react-bootcamp/ReactBootcampProjects";
+import Blog from "./pages/blog/Blog";
 import "./App.css";
 
 //----------------------------------------------------------
@@ -25,6 +26,7 @@ const AppRoutes = () => {
             element={<ReactBootcampProjects />}
           />
         </Route>
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </div>
   );

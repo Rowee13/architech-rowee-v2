@@ -10,7 +10,7 @@ import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full mt-10 place-content-end">
+    <footer className="flex flex-col w-full mt-10 place-content-end">
       <div className="border-b border-zinc-600 w-full h-10" />
       <div className="flex flex-col-reverse md:flex-row items-center justify-between pt-5 pb-16 font-spacegrotesk text-zinc-500">
         <a href="/">2023. Architech Rowee</a>
@@ -57,7 +57,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

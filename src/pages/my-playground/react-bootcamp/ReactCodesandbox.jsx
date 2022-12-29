@@ -3,10 +3,13 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { IoArrowBackOutline } from "react-icons/io5";
 
 import Layout from "../../../components/Layout";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 //----------------------------------------------------------
 
 const ReactCodesandbox = () => {
+  useDocumentTitle("React Bootcamp | ArchitechRowee");
+
   return (
     <Layout>
       <article className="font-outfit text-whisper-white">
@@ -335,7 +338,7 @@ const ReactCodesandbox = () => {
           <div className="text-whisper-white py-20">
             <h3 className="text-3xl lg:text-4xl font-bold">That's it!</h3>
             <p className="text-xl pt-3 text-zinc-400">
-              I hope you enjoy browsing this simple exercises in react.
+              I hope you enjoy browsing these simple exercises in react.
             </p>
           </div>
 

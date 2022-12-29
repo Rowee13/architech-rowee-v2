@@ -4,6 +4,7 @@ import { FaRegLightbulb, FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
 import Layout from "../../../components/Layout";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 import {
   pokedexDemo,
   hangmanDemo,
@@ -16,6 +17,8 @@ import {
 //----------------------------------------------------------
 
 const ReactBootcampProjects = () => {
+  useDocumentTitle("React Bootcamp | ArchitechRowee");
+
   return (
     <Layout>
       <article className="font-outfit text-whisper-white">

@@ -65,8 +65,10 @@ const Contact = () => {
   return (
     <Layout>
       <div className="flex flex-col justify-start items-center h-full 2xl:h-screen font-outfit text-whisper-white">
-        <div className="pb-28 w-full lg:w-6/12 h-full xs:h-72 xl:h-[450px]">
-          <h1 className="text-3xl font-bold pb-10 text-center">{quote.text}</h1>
+        <div className="pb-28 w-full lg:w-6/12 h-full">
+          <h1 className="text-4xl font-bold pb-10 text-center text-riptide-accent">
+            "{quote.text}"
+          </h1>
           <p className="text-zinc-400 text-center">- {quote.from}</p>
         </div>
         <div className="border-b border-zinc-600 w-full h-10 mb-14" />
@@ -205,7 +207,7 @@ const Contact = () => {
                 type="submit"
                 value="Semd"
                 disabled={!getIsFormValid()}
-                className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800"
+                className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
               >
                 SUBMIT
               </button>
