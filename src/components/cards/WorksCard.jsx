@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const WorksCard = ({ workId, workImg, workTitle, workDescription }) => {
   return (
-    <div className="flex flex-col w-4/12 rounded-xl bg-bunker-gray-800">
+    <div className="flex flex-col w-full md:w-6/12 lg:w-4/12 rounded-xl bg-bunker-gray-800">
       <div className="overflow-hidden rounded-t-xl">
         <img
           src={workImg}
