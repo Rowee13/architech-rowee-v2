@@ -51,7 +51,7 @@ module.exports = {
         "navcontainer-shadow": "0 0 55px 0 rgba(147,225,216,0.70)",
       },
       backgroundImage: {
-        "mainbg-image": "url('./assets/bg/background-destination-desktop.jpg')",
+        "mainbg-image": "url('./assets/bg/cosmos-bg.jpg')",
       },
     },
   },

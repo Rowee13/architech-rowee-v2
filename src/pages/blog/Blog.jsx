@@ -19,7 +19,7 @@ const Blog = () => {
             architecture, programming, tech gadgets, and anything else.
           </p>
         </header>
-        <div className="border-b border-zinc-600 w-full h-10" />
+        <div className="border-b border-zinc-500 w-full h-10" />
       </div>
     </Layout>
   );

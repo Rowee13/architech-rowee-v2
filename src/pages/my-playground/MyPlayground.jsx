@@ -23,7 +23,7 @@ const MyPlayground = () => {
             I am hoping to include real projects soon.
           </p>
         </header>
-        <div className="border-b border-zinc-600 w-full h-10" />
+        <div className="border-b border-zinc-500 w-full h-10" />
         <div className="pt-10 flex flex-1 flex-col">
           <h3 className="font-semibold text-2xl pb-5">React Bootcamp</h3>
           <div className="flex flex-col md:flex-row gap-2 lg:gap-4">

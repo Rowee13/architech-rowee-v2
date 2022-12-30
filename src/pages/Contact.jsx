@@ -11,7 +11,6 @@ import { SiGmail, SiDiscord } from "react-icons/si";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import Layout from "../components/Layout";
 import { quotes } from "../constants";
-import { validateEmail } from "../utils/validateEmail";
 import { patternDivider } from "../assets";
 
 //----------------------------------------------------------
@@ -31,20 +30,27 @@ const Contact = () => {
     text: "You are never too old to set new goal, or to dream a new dream.",
     from: "Clive Staples Lewis",
   });
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState({
-    value: "",
-    isTouched: false,
-  });
-  const [message, setMessage] = useState("");
-  const form = useRef();
 
-  const getIsFormValid = () => {
-    return name && validateEmail(email) && message;
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const { name, email, message } = formData;
+
+  const handleChangeInput = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -55,6 +61,8 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          setLoading(false);
+          setIsFormSubmitted(true);
           console.log(result.text);
         },
         (error) => {
@@ -89,7 +97,7 @@ const Contact = () => {
             Get new quote
           </button>
         </header>
-        <div className="border-b border-zinc-600 w-full h-10 mb-14" />
+        <div className="border-b border-zinc-500 w-full h-10 mb-14" />
         <div className="flex flex-col md:flex-row justify-start items-start w-full h-full">
           <div className="w-full lg:w-6/12 pb-10">
             <h3 className="font-bold text-xl lg:text-3xl text-whisper-white">
@@ -170,66 +178,70 @@ const Contact = () => {
             <h1 className="font-bold text-xl lg:text-3xl">
               or fill out the form below
             </h1>
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className="w-full pt-5 text-zinc-400"
-            >
-              <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  name="user_name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="What is your name?"
-                  className="rounded-md bg-bunker-gray-700 py-2 pl-3"
-                />
-              </div>
-              <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="user_email"
-                  onChange={(e) =>
-                    setEmail({ value: e.target.value, ...email })
-                  }
-                  onBlur={(e) => sendEmail({ ...email, isTouched: true })}
-                  placeholder="What is your email?"
-                  className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
-                />
-                {email.isTouched ? <EmailErrorMessage /> : null}
-              </div>
-              <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                <label htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Your purpose on reaching out"
-                  className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
-                />
-              </div>
-              <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  type="text"
-                  name="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows={6}
-                  placeholder="Write your message here"
-                  className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
-                />
-              </div>
-              <button
-                type="submit"
-                value="Semd"
-                disabled={!getIsFormValid()}
-                className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
+            {!isFormSubmitted ? (
+              <form
+                ref={form}
+                noValidate
+                onSubmit={handleSubmit}
+                className="w-full pt-5 text-zinc-400"
               >
-                SUBMIT
-              </button>
-            </form>
+                <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={handleChangeInput}
+                    placeholder="What is your name?"
+                    className="rounded-md bg-bunker-gray-700 py-2 pl-3"
+                  />
+                </div>
+                <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={handleChangeInput}
+                    placeholder="What is your email?"
+                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                  />
+                  {email.isTouched ? <EmailErrorMessage /> : null}
+                </div>
+                <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
+                  <label htmlFor="subject">Subject</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Your purpose on reaching out"
+                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                  />
+                </div>
+                <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    type="text"
+                    name="message"
+                    value={message}
+                    onChange={handleChangeInput}
+                    rows={6}
+                    placeholder="Write your message here"
+                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  value="Semd"
+                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
+                >
+                  {loading ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+            ) : (
+              <h3>
+                Thank you for reaching out. I will respond as soon as possible.
+              </h3>
+            )}
           </div>
         </div>
       </div>

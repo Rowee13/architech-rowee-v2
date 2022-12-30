@@ -31,16 +31,14 @@ const About = () => {
   return (
     <Layout>
       <div className="flex flex-col xl:flex-row">
-        <div className="flex flex-col flex-grow text-whisper-white w-full xl:w-5/12 xl:pr-20">
-          <h1 className="font-oswald text-4xl font-bold pb-2 md:text-5xl">
+        <div className="flex flex-col flex-grow text-zinc-400 w-full xl:w-5/12 xl:pr-20">
+          <h1 className="font-oswald text-whisper-white text-4xl font-bold pb-2 md:text-5xl">
             Hello! I am{" "}
             <strong className="text-riptide-accent uppercase">Rowee</strong>
           </h1>
           <h4 className="text-xl pb-8">Welcome to my personal website</h4>
-          <p className="font-lato pb-4 text-zinc-400">
-            Here’s a short story about me...
-          </p>
-          <p className="font-lato text-justify text-zinc-400 pb-2">
+          <p className="font-lato pb-4">Here’s a short story about me...</p>
+          <p className="font-lato text-justify pb-2">
             Before the COVID-19 pandemic in 2019, I had some business ideas that
             piqued my interest in the tech industry. The shift in my interest
             started with exploring UX/UI design to initially have a clear image
@@ -51,19 +49,19 @@ const About = () => {
             architecture, I am teaching myself about software development and
             how cloud architecture works.
           </p>
-          <p className="font-lato text-justify text-zinc-400 pb-2">
+          <p className="font-lato text-justify pb-2">
             Now, I am on the journey of pursuing software development in the
             hopes of still building my ideas in 2018. I built this personal
             website to showcase my skills and also to serve as my online
             playground. 😁
           </p>
-          <p className="font-lato text-justify text-zinc-400 pb-2">
+          <p className="font-lato text-justify pb-2">
             My focus right now is improving front-end development using React
             and React Native and the use of frameworks for styling like SASS,
             styled-components, and TailwindCSS. On the side, I am also learning
             Python and ThreeJS.
           </p>
-          <p className="font-lato text-justify text-zinc-400 pb-2">
+          <p className="font-lato text-justify pb-2">
             Most of my time in the first year of learning programming was spent
             on understanding software architecture and some industry standards.
             Because of my own ideas, I wanted to figure out and understand how
@@ -89,7 +87,7 @@ const About = () => {
           </h4>
           <div>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip tooltipContent={<SkillRating value="6" tech="HTML" />}>
                 <img
                   src={htmlLogo}
                   alt="html"

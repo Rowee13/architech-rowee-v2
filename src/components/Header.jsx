@@ -59,7 +59,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex flex-row items-center justify-between relative top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 bg-opacity-50 rounded-xl border border-bunker-gray-500 z-30">
+      <div className="flex flex-row items-center justify-between relative top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 bg-opacity-60 rounded-xl border border-bunker-gray-400 z-30">
         <div className="flex flex-row items-center text-whisper-white">
           <button onClick={handleToggleNavMenu}>
             <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8" />
