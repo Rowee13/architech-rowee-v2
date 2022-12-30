@@ -9,7 +9,7 @@ const Resources = () => {
   return (
     <Layout>
       <div className="font-outfit text-whisper-white h-screen">
-        <div className="pb-16 md:w-10/12 lg:w-8/12 lg:pr-10">
+        <header className="pb-16 md:w-10/12 lg:w-8/12 lg:pr-10">
           <h1 className="font-bold text-3xl lg:text-4xl">
             Software I use, tools for design and programming, and other things I
             recommend.
@@ -21,7 +21,7 @@ const Resources = () => {
             think they’re cool or may be useful someday. Another purpose of this
             resources page is to clean up my unorganized and messy bookmarks.
           </p>
-        </div>
+        </header>
         <div className="border-b border-zinc-600 w-full h-10" />
       </div>
     </Layout>

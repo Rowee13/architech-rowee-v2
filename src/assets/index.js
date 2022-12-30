@@ -30,6 +30,9 @@ import todolistDemo from "./react-bootcamp/todolist-app-demo.gif";
 import yahtzeeDemo from "./react-bootcamp/yahtzee-game-demo.gif";
 import dadJokesDemo from "./react-bootcamp/dad-jokes-app-demo.gif";
 
+//? ===================== general assets ===================== ?//
+import patternDivider from "./general/pattern-divider-desktop.svg";
+
 //? ======================== exports ======================== ?//
 export {
   htmlLogo,
@@ -58,4 +61,5 @@ export {
   todolistDemo,
   yahtzeeDemo,
   dadJokesDemo,
+  patternDivider,
 };

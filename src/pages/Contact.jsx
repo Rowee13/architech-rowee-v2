@@ -12,6 +12,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 import Layout from "../components/Layout";
 import { quotes } from "../constants";
 import { validateEmail } from "../utils/validateEmail";
+import { patternDivider } from "../assets";
 
 //----------------------------------------------------------
 
@@ -25,6 +26,11 @@ const EmailErrorMessage = () => {
 
 const Contact = () => {
   useDocumentTitle("Contact Me | ArchitechRowee");
+
+  const [getQuote, setGetQuote] = useState({
+    text: "You are never too old to set new goal, or to dream a new dream.",
+    from: "Clive Staples Lewis",
+  });
   const [name, setName] = useState("");
   const [email, setEmail] = useState({
     value: "",
@@ -32,9 +38,6 @@ const Contact = () => {
   });
   const [message, setMessage] = useState("");
   const form = useRef();
-
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[randomIndex];
 
   const getIsFormValid = () => {
     return name && validateEmail(email) && message;
@@ -62,17 +65,32 @@ const Contact = () => {
     e.target.reset();
   };
 
+  //* quote generator
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex];
+
+  const getNewQuote = () => {
+    setGetQuote(quote);
+  };
+
   return (
     <Layout>
-      <div className="flex flex-col justify-start items-center h-full 2xl:h-screen font-outfit text-whisper-white">
-        <div className="pb-28 w-full lg:w-6/12 h-full">
-          <h1 className="text-4xl font-bold pb-10 text-center text-riptide-accent">
-            "{quote.text}"
+      <div className="flex flex-col justify-start items-center h-full font-outfit text-whisper-white">
+        <header className="flex flex-col justify-between items-center pb-28 w-full lg:w-7/12 h-full">
+          <h1 className="text-3xl md:text-4xl font-bold pb-10 text-center text-riptide-accent">
+            "{getQuote.text}"
           </h1>
-          <p className="text-zinc-400 text-center">- {quote.from}</p>
-        </div>
+          <p className="text-zinc-400 text-center">- {getQuote.from}</p>
+          <img src={patternDivider} alt="divider" className="pt-10" />
+          <button
+            onClick={getNewQuote}
+            className="btn mt-10 w-10/12 lg:w-4/12 border-0 hover:bg-riptide-accent hover:shadow-navcontainer-shadow hover:text-bunker-gray-900"
+          >
+            Get new quote
+          </button>
+        </header>
         <div className="border-b border-zinc-600 w-full h-10 mb-14" />
-        <div className="flex flex-col md:flex-row justify-start items-start w-full">
+        <div className="flex flex-col md:flex-row justify-start items-start w-full h-full">
           <div className="w-full lg:w-6/12 pb-10">
             <h3 className="font-bold text-xl lg:text-3xl text-whisper-white">
               Feel free to reach out thru socials

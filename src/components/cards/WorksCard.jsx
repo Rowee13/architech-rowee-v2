@@ -16,13 +16,13 @@ const WorksCard = ({ workId, workImg, workTitle, workDescription }) => {
         <h3 className="font-extrabold text-xl pb-3 text-whisper-white truncate">
           {workTitle}
         </h3>
-        <p className="text-zinc-400 text-sm text-justify line-clamp-3 pb-4 h-16">
+        <p className="text-zinc-400 text-sm line-clamp-3 pb-4 h-20">
           {workDescription}
         </p>
       </div>
       <Link
         to={workId}
-        className="text-center py-3 m-8 rounded-xl uppercase font-black bg-bunker-gray-800 border border-riptide-accent hover:bg-riptide-accent hover:text-bunker-gray-900"
+        className="text-center text-riptide-accent py-3 m-8 rounded-xl uppercase font-black bg-bunker-gray-800 border border-riptide-accent hover:bg-riptide-accent hover:text-bunker-gray-900"
       >
         view
       </Link>

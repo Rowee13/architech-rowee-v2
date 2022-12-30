@@ -12,15 +12,15 @@ const Logo = () => (
   <div className="flex flex-col w-full md:w-auto justify-center items-center border-y border-y-whisper-white">
     <Link
       to="/"
-      className="flex text-whisper-white hover:text-riptide-accent text-3xl font-oswald font-semibold pt-3.5"
+      className="flex text-whisper-white hover:text-riptide-accent text-2xl md:text-3xl font-oswald font-semibold pt-3.5"
     >
       ARCHITECHROWEE
     </Link>
     <div className="flex flex-row pb-3.5 pt-1">
-      <h3 className="text-whisper-white text-xl font-petitformal font-medium">
+      <h3 className="text-whisper-white text-md md:text-xl font-petitformal font-medium">
         Architecture
       </h3>
-      <h3 className="text-whisper-white text-xl font-poppins font-semibold">
+      <h3 className="text-whisper-white text-md md:text-xl font-poppins font-semibold">
         + Tech
       </h3>
     </div>
@@ -28,14 +28,14 @@ const Logo = () => (
 );
 
 const NavLinks = ({ handleClick }) => (
-  <nav className="my-9">
+  <nav className="mt-8">
     {links.map((item) => (
       <NavLink
         key={item.name}
         to={item.to}
         className={({ isActive }) => {
           return (
-            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-base rounded  hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
+            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded  hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
             (isActive
               ? "bg-riptide-accent text-bunker-gray-800"
               : "bg-bunker-gray-700 text-whisper-white hover:bg-bunker-gray-800")
@@ -59,7 +59,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex flex-row items-center justify-between relativetop-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 rounded-xl border border-bunker-gray-500 z-30">
+      <div className="flex flex-row items-center justify-between relative top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 bg-opacity-50 rounded-xl border border-bunker-gray-500 z-30">
         <div className="flex flex-row items-center text-whisper-white">
           <button onClick={handleToggleNavMenu}>
             <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8" />
@@ -79,13 +79,13 @@ const Header = () => {
       </div>
       {toggleNavMenu && (
         <>
-          <div className="absolute w-80 bg-bunker-gray-900 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-10 rounded-xl z-50">
+          <div className="absolute w-64 sm:w-72 lg:w-80 bg-bunker-gray-900 bg-opacity-80 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-8 md:p-10 rounded-xl z-50">
             <Logo />
             <NavLinks />
           </div>
           <div
             onClick={(e) => setToggleNavMenu(!toggleNavMenu)}
-            className="absolute top-0 w-full h-screen bg-black bg-opacity-30 z-40"
+            className="absolute top-0 w-full h-screen bg-black bg-opacity-40 z-40"
           />
         </>
       )}

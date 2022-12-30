@@ -12,7 +12,7 @@ const MyPlayground = () => {
   return (
     <Layout>
       <div className="font-outfit text-whisper-white">
-        <div className="pb-16 md:w-10/12 lg:w-7/12">
+        <header className="pb-16 md:w-10/12 lg:w-7/12">
           <h1 className="font-bold text-3xl lg:text-4xl">
             I've collected everything I've made, from simple study projects to
             intricate ones.
@@ -22,7 +22,7 @@ const MyPlayground = () => {
             various tutorials and online courses in order to improve my skills.
             I am hoping to include real projects soon.
           </p>
-        </div>
+        </header>
         <div className="border-b border-zinc-600 w-full h-10" />
         <div className="pt-10 flex flex-1 flex-col">
           <h3 className="font-semibold text-2xl pb-5">React Bootcamp</h3>

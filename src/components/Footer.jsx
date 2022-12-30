@@ -21,7 +21,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaGithub className="w-6 h-6 hover:text-bunker-gray-50 hover:scale-110" />
+            <FaGithub className="w-6 h-6 hover:text-riptide-accent hover:scale-110" />
           </a>
           <a
             href="https://www.linkedin.com/in/roweeapor/"
@@ -29,7 +29,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaLinkedin className="w-6 h-6 hover:text-bunker-gray-50 hover:scale-110" />
+            <FaLinkedin className="w-6 h-6 hover:text-riptide-accent hover:scale-110" />
           </a>
           <a
             href="https://www.facebook.com/rowee13/"
@@ -37,7 +37,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaFacebookMessenger className="w-6 h-6 hover:text-bunker-gray-50 hover:scale-110" />
+            <FaFacebookMessenger className="w-6 h-6 hover:text-riptide-accent hover:scale-110" />
           </a>
           <a
             href="https://www.telegram.me/roweeapor"
@@ -45,7 +45,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaTelegram className="w-6 h-6 hover:text-bunker-gray-50 hover:scale-110" />
+            <FaTelegram className="w-6 h-6 hover:text-riptide-accent hover:scale-110" />
           </a>
           <a
             href="mailto:roweeapor@gmail.com"
@@ -53,7 +53,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <SiGmail className="w-6 h-6 hover:text-bunker-gray-50 hover:scale-110" />
+            <SiGmail className="w-6 h-6 hover:text-riptide-accent hover:scale-110" />
           </a>
         </div>
       </div>
