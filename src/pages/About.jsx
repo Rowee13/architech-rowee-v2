@@ -94,42 +94,50 @@ const About = () => {
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip tooltipContent={<SkillRating value="6" tech="CSS" />}>
                 <img
                   src={cssLogo}
                   alt="css"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="6" tech="Javascript" />}
+              >
                 <img
                   src={jsLogo}
                   alt="javascript"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="6" tech="ReactJS" />}
+              >
                 <img
                   src={reactLogo}
                   alt="react"
                   className="w-[54px] h-[54px] grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="3" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="3" tech="Typescript" />}
+              >
                 <img
                   src={tsLogo}
                   alt="typescript"
                   className="w-[50px] h-[50px] grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="3" />}>
+              <Tooltip tooltipContent={<SkillRating value="3" tech="Redux" />}>
                 <img
                   src={reduxLogo}
                   alt="redux"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="2" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="2" tech="ThreeJS" />}
+              >
                 <img
                   src={threejsLogo}
                   alt="threejs"
@@ -138,21 +146,23 @@ const About = () => {
               </Tooltip>
             </div>
             <div className="flex flex-row flex-wrap gap-4 items-center pt-2">
-              <Tooltip tooltipContent={<SkillRating value="5" />}>
+              <Tooltip tooltipContent={<SkillRating value="5" tech="SASS" />}>
                 <img
                   src={sassLogo}
                   alt="sass"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="6" tech="TailwindCSS" />}
+              >
                 <img
                   src={tailwindLogo}
                   alt="tailwind"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="6" />}>
+              <Tooltip tooltipContent={<SkillRating value="6" tech="MUI" />}>
                 <img
                   src={muiLogo}
                   alt="mui"
@@ -166,28 +176,30 @@ const About = () => {
           </h4>
           <div>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
-              <Tooltip tooltipContent={<SkillRating value="3" />}>
+              <Tooltip tooltipContent={<SkillRating value="3" tech="NodeJS" />}>
                 <img
                   src={nodeLogo}
                   alt="nodeJS"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="4" />}>
+              <Tooltip tooltipContent={<SkillRating value="4" tech="Python" />}>
                 <img
                   src={pythonLogo}
                   alt="python"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="3" />}>
+              <Tooltip tooltipContent={<SkillRating value="3" tech="Django" />}>
                 <img
                   src={djangoLogo}
                   alt="django"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="4" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="4" tech="Firebase" />}
+              >
                 <img
                   src={firebaseLogo}
                   alt="firebase"
@@ -201,7 +213,9 @@ const About = () => {
           </h4>
           <div>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
-              <Tooltip tooltipContent={<SkillRating value="4" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="4" tech="MongoDB" />}
+              >
                 <img
                   src={mongodbLogo}
                   alt="mongodb"
@@ -215,21 +229,27 @@ const About = () => {
           </h4>
           <div>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2 z-0">
-              <Tooltip tooltipContent={<SkillRating value="7" />}>
+              <Tooltip tooltipContent={<SkillRating value="7" tech="Figma" />}>
                 <img
                   src={figmaLogo}
                   alt="figma"
                   className="w-[50px] h-[50px] grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="5" />}>
+              <Tooltip
+                tooltipContent={
+                  <SkillRating value="5" tech="Affinity Designer" />
+                }
+              >
                 <img
                   src={affdesignerLogo}
                   alt="affinity-designer"
                   className="w-14 h-14 grayscale hover:grayscale-0"
                 />
               </Tooltip>
-              <Tooltip tooltipContent={<SkillRating value="5" />}>
+              <Tooltip
+                tooltipContent={<SkillRating value="5" tech="Affinity Photo" />}
+              >
                 <img
                   src={affphotoLogo}
                   alt="affinity-V2"

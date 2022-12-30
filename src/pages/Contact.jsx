@@ -232,6 +232,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   value="Semd"
+                  onClick={handleSubmit}
                   className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
                 >
                   {loading ? "Sending..." : "Send Message"}
