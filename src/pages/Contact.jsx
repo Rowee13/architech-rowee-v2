@@ -15,14 +15,6 @@ import { patternDivider } from "../assets";
 
 //----------------------------------------------------------
 
-const EmailErrorMessage = () => {
-  return (
-    <p className="absolute bottom-[-6px] font-outfit text-red-500">
-      Email must be valid
-    </p>
-  );
-};
-
 const Contact = () => {
   useDocumentTitle("Contact Me | ArchitechRowee");
 
@@ -92,12 +84,14 @@ const Contact = () => {
           <img src={patternDivider} alt="divider" className="pt-10" />
           <button
             onClick={getNewQuote}
-            className="btn mt-10 w-10/12 lg:w-4/12 border-0 hover:bg-riptide-accent hover:shadow-navcontainer-shadow hover:text-bunker-gray-900"
+            className="btn mt-10 w-10/12 lg:w-4/12 border border-bunker-gray-400 hover:bg-riptide-accent hover:shadow-navcontainer-shadow hover:text-bunker-gray-900"
           >
             Get new quote
           </button>
         </header>
+
         <div className="border-b border-zinc-500 w-full h-10 mb-14" />
+
         <div className="flex flex-col md:flex-row justify-start items-start w-full h-full">
           <div className="w-full lg:w-6/12 pb-10">
             <h3 className="font-bold text-xl lg:text-3xl text-whisper-white">
@@ -206,7 +200,6 @@ const Contact = () => {
                     placeholder="What is your email?"
                     className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
                   />
-                  {email.isTouched ? <EmailErrorMessage /> : null}
                 </div>
                 <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
                   <label htmlFor="subject">Subject</label>
@@ -233,7 +226,7 @@ const Contact = () => {
                   type="submit"
                   value="Semd"
                   onClick={handleSubmit}
-                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
+                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg border border-bunker-gray-400 text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>

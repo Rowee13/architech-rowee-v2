@@ -1,13 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import MyPlayground from "./pages/my-playground/MyPlayground";
-import ReactCodesandbox from "./pages/my-playground/react-bootcamp/ReactCodesandbox";
-import ReactBootcampProjects from "./pages/my-playground/react-bootcamp/ReactBootcampProjects";
-import Blog from "./pages/blog/Blog";
-import Resources from "./pages/resources/Resources";
+import {
+  Home,
+  About,
+  Contact,
+  MyPlayground,
+  ReactCodesandbox,
+  ReactBootcampProjects,
+  Projects,
+  Blog,
+  Resources,
+} from "./pages";
 import "./App.css";
 
 //----------------------------------------------------------
@@ -27,6 +30,7 @@ const AppRoutes = () => {
             element={<ReactBootcampProjects />}
           />
         </Route>
+        <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>

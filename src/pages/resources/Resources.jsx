@@ -14,7 +14,7 @@ const Resources = () => {
             Software I use, tools for design and programming, and other things I
             recommend.
           </h1>
-          <p className="text-zinc-400 pt-5">
+          <p className="text-zinc-400 pt-5 lg:pr-24">
             This is a collection of websites, tools, software, and other stuff
             that I wanted to share with whoever visits my website. I personally
             use most resources here but some of them are just addition because I
