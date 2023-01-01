@@ -22,7 +22,7 @@ const WorksCard = ({ workId, workImg, workTitle, workDescription }) => {
       </div>
       <Link
         to={workId}
-        className="text-center text-riptide-accent w-full xs:w-5/12 py-2 xs:py-3 mt-10 mb-4 rounded-lg uppercase font-black bg-bunker-gray-800 border border-riptide-accent hover:bg-riptide-accent hover:text-bunker-gray-900"
+        className="text-center text-riptide-accent w-full xs:w-5/12 py-2 xs:py-3 mt-10 mb-4 rounded-lg uppercase font-black bg-bunker-gray-800 border border-riptide-accent hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:border-0 hover:text-bunker-gray-900"
       >
         view
       </Link>

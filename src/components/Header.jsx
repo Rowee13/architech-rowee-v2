@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
-import { RiSunFill } from "react-icons/ri";
-// RiMoonClearFill,
+import { ImProfile } from "react-icons/im";
 
 import { links } from "../constants";
 
@@ -12,7 +11,7 @@ const Logo = () => (
   <div className="flex flex-col w-full md:w-auto justify-center items-center border-y border-y-whisper-white">
     <Link
       to="/"
-      className="flex text-whisper-white hover:text-riptide-accent text-2xl md:text-3xl font-oswald font-semibold pt-3.5"
+      className="flex text-2xl md:text-3xl font-oswald font-semibold pt-3.5 text-whisper-white hover:text-transparent bg-clip-text hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:duration-[400ms]"
     >
       ARCHITECHROWEE
     </Link>
@@ -37,7 +36,7 @@ const NavLinks = ({ handleClick }) => (
           return (
             "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded  hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
             (isActive
-              ? "bg-riptide-accent text-bunker-gray-800"
+              ? "bg-gradient-to-r from-riptide-accent to-riptide-bright text-bunker-gray-800"
               : "bg-bunker-gray-700 text-whisper-white hover:bg-bunker-gray-800")
           );
         }}
@@ -62,20 +61,27 @@ const Header = () => {
       <div className="flex flex-row items-center justify-between relative top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 bg-opacity-60 rounded-xl border border-bunker-gray-400 z-30">
         <div className="flex flex-row items-center text-whisper-white">
           <button onClick={handleToggleNavMenu}>
-            <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8" />
+            <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8 text-riptide-accent" />
           </button>
           <Link
             to="/"
-            className={`font-oswald font-bold uppercase text-base md:text-2xl ${
+            className={`font-oswald font-bold uppercase text-base md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright ${
               toggleNavMenu ? "opacity-0" : "opacity-100"
             }`}
           >
             ArchitechRowee
           </Link>
         </div>
-        <div className="flex items-center justify-center rounded-full w-6 h-6 md:w-9 md:h-9 m-5 lg:m-8 bg-bunker-gray-400 cursor-pointer hover:bg-bunker-gray-100">
-          <RiSunFill className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-800" />
-        </div>
+        <a
+          href="https://architech-rowee.notion.site/architech-rowee/Rowee-Andrew-Apor-84bffad3172449bfbf4e957cdf03fcda"
+          aria-label="resume"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="tooltip tooltip-left tooltip-accent flex items-center justify-center rounded-full w-6 h-6 md:w-10 md:h-10 m-5 lg:m-8 bg-bunker-gray-300 cursor-pointer hover:bg-gradient-to-r from-riptide-accent to-riptide-bright"
+          data-tip="see resume"
+        >
+          <ImProfile className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-900" />
+        </a>
       </div>
       {toggleNavMenu && (
         <>

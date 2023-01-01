@@ -34,7 +34,9 @@ const About = () => {
         <div className="flex flex-col flex-grow text-zinc-400 w-full xl:w-5/12 xl:pr-20">
           <h1 className="font-oswald text-whisper-white text-4xl font-bold pb-2 md:text-5xl">
             Hello! I am{" "}
-            <strong className="text-riptide-accent uppercase">Rowee</strong>
+            <strong className="bg-clip-text text-transparent bg-gradient-to-r from-riptide-accent to-riptide-bright uppercase">
+              Rowee
+            </strong>
           </h1>
           <h4 className="text-xl pb-8">Welcome to my personal website</h4>
           <p className="font-lato pb-4">Here’s a short story about me...</p>
@@ -146,7 +148,7 @@ const About = () => {
               </Tooltip>
             </div>
             <div className="flex flex-row flex-wrap gap-4 items-center pt-2">
-              <Tooltip tooltipContent={<SkillRating value="5" tech="SASS" />}>
+              <Tooltip tooltipContent={<SkillRating value="4" tech="SASS" />}>
                 <img
                   src={sassLogo}
                   alt="sass"

@@ -36,6 +36,7 @@ module.exports = {
           900: "#121416",
         },
         "riptide-accent": "#93E1D8",
+        "riptide-bright": "#21d190",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
@@ -48,7 +49,7 @@ module.exports = {
       boxShadow: {
         "nav-shadow": "0 0 2px 3px rgba(147, 225, 216, 0.5)",
         "card-shadow": "0 0 2px 7px rgba(147, 225, 216, 0.25)",
-        "navcontainer-shadow": "0 0 55px 0 rgba(147,225,216,0.70)",
+        "navcontainer-shadow": "0 0 55px 2px rgba(147,225,216,0.70)",
       },
       backgroundImage: {
         "mainbg-image": "url('./assets/bg/cosmos-bg.jpg')",

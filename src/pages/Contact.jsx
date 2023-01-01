@@ -77,14 +77,14 @@ const Contact = () => {
     <Layout>
       <div className="flex flex-col justify-start items-center h-full font-outfit text-whisper-white">
         <header className="flex flex-col justify-between items-center pb-28 w-full lg:w-7/12 h-full">
-          <h1 className="text-3xl md:text-4xl font-bold pb-10 text-center text-riptide-accent">
+          <h1 className="text-3xl md:text-4xl font-bold pb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright">
             "{getQuote.text}"
           </h1>
           <p className="text-zinc-400 text-center">- {getQuote.from}</p>
           <img src={patternDivider} alt="divider" className="pt-10" />
           <button
             onClick={getNewQuote}
-            className="btn mt-10 w-10/12 lg:w-4/12 border border-bunker-gray-400 hover:bg-riptide-accent hover:shadow-navcontainer-shadow hover:text-bunker-gray-900"
+            className="btn mt-10 w-10/12 lg:w-4/12 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:shadow-navcontainer-shadow hover:border-0 hover:text-bunker-gray-900"
           >
             Get new quote
           </button>
@@ -103,7 +103,7 @@ const Contact = () => {
                 aria-label="messenger"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-full md:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-full md:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaFacebookMessenger className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -115,7 +115,7 @@ const Contact = () => {
                 aria-label="Telegram"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaTelegram className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -127,7 +127,7 @@ const Contact = () => {
                 aria-label="discord"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <SiDiscord className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -139,7 +139,7 @@ const Contact = () => {
                 aria-label="Linkedin"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaLinkedin className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -151,7 +151,7 @@ const Contact = () => {
                 aria-label="Github"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaGithub className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">Github</h3>
@@ -161,7 +161,7 @@ const Contact = () => {
                 aria-label="Email"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-riptide-accent hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out delay-100 duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <SiGmail className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">Gmail</h3>
@@ -226,7 +226,7 @@ const Contact = () => {
                   type="submit"
                   value="Semd"
                   onClick={handleSubmit}
-                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg border border-bunker-gray-400 text-whisper-white rounded-md hover:bg-riptide-accent hover:text-bunker-gray-800 transition-all ease-in-out delay-100 duration-150"
+                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 transition-all ease-in-out duration-150"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
