@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 import emailjs from "@emailjs/browser";
 import {
   FaFacebookMessenger,
@@ -11,45 +13,45 @@ import { SiGmail, SiDiscord } from "react-icons/si";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import Layout from "../components/Layout";
 import { quotes } from "../constants";
-import { patternDivider } from "../assets";
+import { patternDivider, emailSentIcon } from "../assets";
 
 //----------------------------------------------------------
 
 const Contact = () => {
   useDocumentTitle("Contact Me | ArchitechRowee");
 
+  //* quote generator
   const [getQuote, setGetQuote] = useState({
     text: "You are never too old to set new goal, or to dream a new dream.",
     from: "Clive Staples Lewis",
   });
 
-  const form = useRef();
-  const [loading, setLoading] = useState(false);
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex];
 
-  const { name, email, message } = formData;
-
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-
-    setFormData({ ...formData, [name]: value });
+  const getNewQuote = () => {
+    setGetQuote(quote);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //* contact form
+  const [loading, setLoading] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ criteriaMode: "all" });
+
+  const onSubmit = (e) => {
     setLoading(true);
 
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        "service_8ihywe8",
+        "template_rvr56og",
         form.current,
-        process.env.EMAILJS_PUBLIC_KEY
+        "LrY0TPqbGBt5uxsEn"
       )
       .then(
         (result) => {
@@ -58,19 +60,11 @@ const Contact = () => {
           console.log(result.text);
         },
         (error) => {
-          alert(error.text);
+          alert("Failed to send message! Please try again later.", error.text);
         }
       );
 
     e.target.reset();
-  };
-
-  //* quote generator
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[randomIndex];
-
-  const getNewQuote = () => {
-    setGetQuote(quote);
   };
 
   return (
@@ -93,6 +87,7 @@ const Contact = () => {
         <div className="border-b border-zinc-500 w-full h-10 mb-14" />
 
         <div className="flex flex-col md:flex-row justify-start items-start w-full h-full">
+          {/* === social links === */}
           <div className="w-full lg:w-6/12 pb-10">
             <h3 className="font-bold text-xl lg:text-3xl text-whisper-white">
               Feel free to reach out thru socials
@@ -103,7 +98,7 @@ const Contact = () => {
                 aria-label="messenger"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-full md:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-full md:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaFacebookMessenger className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -115,7 +110,7 @@ const Contact = () => {
                 aria-label="Telegram"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaTelegram className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -127,7 +122,7 @@ const Contact = () => {
                 aria-label="discord"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <SiDiscord className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -139,7 +134,7 @@ const Contact = () => {
                 aria-label="Linkedin"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaLinkedin className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">
@@ -151,7 +146,7 @@ const Contact = () => {
                 aria-label="Github"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <FaGithub className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">Github</h3>
@@ -161,44 +156,85 @@ const Contact = () => {
                 aria-label="Email"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
+                className="flex flex-row justify-start items-center bg-bunker-gray-800 w-48 sm:w-52 py-4 pl-12 rounded-md text-zinc-400 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 hover:scale-105 transition-all ease-in-out duration-150"
               >
                 <SiGmail className="w-5 h-5" />
                 <h3 className="font-semibold pl-4 sm:pl-2 text-base">Gmail</h3>
               </a>
             </div>
           </div>
+
+          {/* === contact form === */}
           <div className="w-full lg:w-6/12">
             <h1 className="font-bold text-xl lg:text-3xl">
               or fill out the form below
             </h1>
             {!isFormSubmitted ? (
               <form
+                id="contact-form"
                 ref={form}
                 noValidate
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmit(onSubmit)}
                 className="w-full pt-5 text-zinc-400"
               >
                 <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">
+                    Name<sup className="text-riptide-accent text-md">*</sup>
+                  </label>
                   <input
                     type="text"
                     name="name"
-                    value={name}
-                    onChange={handleChangeInput}
+                    {...register("name", {
+                      required: "Name is required",
+                      maxLength: {
+                        value: 40,
+                        message: "Input exceed max length.",
+                      },
+                    })}
                     placeholder="What is your name?"
-                    className="rounded-md bg-bunker-gray-700 py-2 pl-3"
+                    className="form-input rounded-md bg-bunker-gray-700 py-2 pl-3 border-bunker-gray-400 focus:caret-riptide-accent focus:border focus:border-riptide-accent"
+                  />
+                  <ErrorMessage
+                    errors={errors}
+                    name="name"
+                    render={({ messages }) =>
+                      messages &&
+                      Object.entries(messages).map(([type, message]) => (
+                        <p key={type} className="text-riptide-accent">
+                          {message}
+                        </p>
+                      ))
+                    }
                   />
                 </div>
                 <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">
+                    Email<sup className="text-riptide-accent text-md">*</sup>
+                  </label>
                   <input
                     type="email"
                     name="email"
-                    value={email}
-                    onChange={handleChangeInput}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
                     placeholder="What is your email?"
-                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                    className="form-input rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm border-bunker-gray-400 focus:caret-riptide-accent focus:border focus:border-riptide-accent"
+                  />
+                  <ErrorMessage
+                    errors={errors}
+                    name="email"
+                    render={({ messages }) =>
+                      messages &&
+                      Object.entries(messages).map(([type, message]) => (
+                        <p key={type} className="text-riptide-accent">
+                          {message}
+                        </p>
+                      ))
+                    }
                   />
                 </div>
                 <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
@@ -206,35 +242,49 @@ const Contact = () => {
                   <input
                     type="text"
                     name="subject"
+                    {...register("subject")}
                     placeholder="Your purpose on reaching out"
-                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                    className="form-input rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm border-bunker-gray-400 focus:caret-riptide-accent focus:border focus:border-riptide-accent"
                   />
                 </div>
                 <div className="flex flex-col w-full pb-3 lg:w-4/5 text-sm">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">
+                    Message<sup className="text-riptide-accent text-md">*</sup>
+                  </label>
                   <textarea
                     type="text"
                     name="message"
-                    value={message}
-                    onChange={handleChangeInput}
+                    {...register("message", {
+                      required: "Sorry, message is required too.",
+                    })}
                     rows={6}
                     placeholder="Write your message here"
-                    className="rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm"
+                    className="form-textarea rounded-md bg-bunker-gray-700 py-2 pl-3 text-sm border-bunker-gray-400 focus:caret-riptide-accent focus:border focus:border-riptide-accent"
+                  />
+                  <ErrorMessage
+                    errors={errors}
+                    name="message"
+                    render={({ message }) => (
+                      <p className="text-riptide-accent">{message}</p>
+                    )}
                   />
                 </div>
                 <button
                   type="submit"
-                  value="Semd"
-                  onClick={handleSubmit}
-                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 transition-all ease-in-out duration-150"
+                  value="Send"
+                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 transition-all ease-in-out duration-150"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             ) : (
-              <h3>
-                Thank you for reaching out. I will respond as soon as possible.
-              </h3>
+              <div className="flex flex-col items-center pt-10">
+                <img src={emailSentIcon} alt="email-sent-icon" />
+                <h3 className="text-2xl text-center px-28">
+                  Thank you for reaching out. I will respond as soon as
+                  possible.
+                </h3>
+              </div>
             )}
           </div>
         </div>

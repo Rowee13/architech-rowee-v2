@@ -439,7 +439,7 @@ const ReactBootcampProjects = () => {
               </div>
             </div>
 
-            <div className="text-whisper-white font-lato py-20">
+            <div className="text-whisper-white py-20">
               <h3 className="text-3xl lg:text-4xl font-bold">That's it!</h3>
               <p className="text-xl font-medium pt-3 text-zinc-400">
                 I hope you enjoy browsing these projects. I will update this

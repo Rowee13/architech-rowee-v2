@@ -32,6 +32,7 @@ import dadJokesDemo from "./react-bootcamp/dad-jokes-app-demo.gif";
 
 //? ===================== general assets ===================== ?//
 import patternDivider from "./general/pattern-divider-desktop.svg";
+import emailSentIcon from "./general/email-sent.png";
 
 //? ======================== exports ======================== ?//
 export {
@@ -62,4 +63,5 @@ export {
   yahtzeeDemo,
   dadJokesDemo,
   patternDivider,
+  emailSentIcon,
 };
