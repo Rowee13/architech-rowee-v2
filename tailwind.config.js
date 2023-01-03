@@ -53,6 +53,7 @@ module.exports = {
       },
       backgroundImage: {
         "mainbg-image": "url('./assets/bg/cosmos-bg.jpg')",
+        "smiley-3d": "url('./assets/general/smiley-3d.jpg')",
       },
     },
   },

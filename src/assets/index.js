@@ -20,7 +20,7 @@ import affphotoLogo from "./tech-stack/affphoto.png";
 
 //? ======================== card image assets ======================== ?//
 import reactCodesandboxImg from "./react-bootcamp/react-in-codesandbox.png";
-import reactBootcampImg from "./react-bootcamp/react-bootcamp-projects.gif";
+import reactBootcampImg from "./react-bootcamp/react-bootcamp-projects.png";
 
 //? ===================== react bootcamp assets ===================== ?//
 import pokedexDemo from "./react-bootcamp/pokedex-demo.gif";

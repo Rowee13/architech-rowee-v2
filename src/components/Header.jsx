@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { ImProfile } from "react-icons/im";
+import { FaRegWindowClose } from "react-icons/fa";
 
 import { links } from "../constants";
 
@@ -34,7 +35,7 @@ const NavLinks = ({ handleClick }) => (
         to={item.to}
         className={({ isActive }) => {
           return (
-            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded  hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
+            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
             (isActive
               ? "bg-gradient-to-r from-riptide-accent to-riptide-bright text-bunker-gray-800"
               : "bg-bunker-gray-700 text-whisper-white hover:bg-bunker-gray-800")
@@ -86,11 +87,15 @@ const Header = () => {
       {toggleNavMenu && (
         <>
           <div className="absolute w-64 sm:w-72 lg:w-80 bg-bunker-gray-900 bg-opacity-80 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-8 md:p-10 rounded-xl z-50">
+            <FaRegWindowClose
+              className="w-5 h-5 mb-5 text-bunker-gray-50 cursor-pointer"
+              onClick={() => setToggleNavMenu(!toggleNavMenu)}
+            />
             <Logo />
             <NavLinks />
           </div>
           <div
-            onClick={(e) => setToggleNavMenu(!toggleNavMenu)}
+            onClick={() => setToggleNavMenu(!toggleNavMenu)}
             className="absolute top-0 w-full h-screen bg-black bg-opacity-40 z-40"
           />
         </>
