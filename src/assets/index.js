@@ -21,6 +21,7 @@ import affphotoLogo from "./tech-stack/affphoto.png";
 //? ======================== card image assets ======================== ?//
 import reactCodesandboxImg from "./react-bootcamp/react-in-codesandbox.png";
 import reactBootcampImg from "./react-bootcamp/react-bootcamp-projects.png";
+import femChallengeImg from "./playground/fem-image.png";
 
 //? ===================== react bootcamp assets ===================== ?//
 import pokedexDemo from "./react-bootcamp/pokedex-demo.gif";
@@ -56,6 +57,7 @@ export {
   affphotoLogo,
   reactCodesandboxImg,
   reactBootcampImg,
+  femChallengeImg,
   pokedexDemo,
   hangmanDemo,
   lightsOutDemo,

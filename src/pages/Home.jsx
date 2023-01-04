@@ -12,7 +12,10 @@ const Home = () => {
   useDocumentTitle("ArchitechRowee");
 
   return (
-    <div className="h-full md:h-screen overflow-hidden">
+    <div
+      className="h-full md:h-screen overflow-hidden"
+      style={{ backgroundColor: "#25292D" }}
+    >
       {modalIsOpen && (
         <HomeModal handleClose={() => setModalIsOpen(!modalIsOpen)} />
       )}

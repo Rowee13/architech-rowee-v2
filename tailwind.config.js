@@ -49,7 +49,7 @@ module.exports = {
       boxShadow: {
         "nav-shadow": "0 0 2px 3px rgba(147, 225, 216, 0.5)",
         "card-shadow": "0 0 2px 7px rgba(147, 225, 216, 0.25)",
-        "navcontainer-shadow": "0 0 55px 2px rgba(147,225,216,0.70)",
+        "navcontainer-shadow": "0 0 55px 2px rgba(147,225,216,0.9)",
       },
       backgroundImage: {
         "mainbg-image": "url('./assets/bg/cosmos-bg.jpg')",

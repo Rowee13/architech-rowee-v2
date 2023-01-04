@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { ImProfile } from "react-icons/im";
-import { FaRegWindowClose } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
 
 import { links } from "../constants";
 
@@ -35,10 +35,10 @@ const NavLinks = ({ handleClick }) => (
         to={item.to}
         className={({ isActive }) => {
           return (
-            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded hover:border-riptide-accent hover:border hover:shadow-nav-shadow " +
+            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded hover:border-riptide-accent hover:border hover:shadow-nav-shadow hover:bg-riptide-accent hover:bg-opacity-50 hover:transition-all hover:ease-in hover:duration-200 " +
             (isActive
               ? "bg-gradient-to-r from-riptide-accent to-riptide-bright text-bunker-gray-800"
-              : "bg-bunker-gray-700 text-whisper-white hover:bg-bunker-gray-800")
+              : "bg-bunker-gray-700 text-whisper-white")
           );
         }}
         onClick={() => handleClick && handleClick()}
@@ -48,6 +48,8 @@ const NavLinks = ({ handleClick }) => (
     ))}
   </nav>
 );
+
+console.log(<NavLinks />);
 
 const Header = () => {
   const [toggleNavMenu, setToggleNavMenu] = useState(false);
@@ -78,17 +80,17 @@ const Header = () => {
           aria-label="resume"
           target="_blank"
           rel="noreferrer noopener"
-          className="tooltip tooltip-left tooltip-accent flex items-center justify-center rounded-full w-6 h-6 md:w-10 md:h-10 m-5 lg:m-8 bg-bunker-gray-300 cursor-pointer hover:bg-gradient-to-r from-riptide-accent to-riptide-bright"
+          className="tooltip tooltip-left tooltip-accent flex items-center justify-center rounded-full w-6 h-6 md:w-10 md:h-10 m-5 lg:m-8 border border-bunker-gray-100 cursor-pointer hover:bg-gradient-to-r from-riptide-accent to-riptide-bright"
           data-tip="see resume"
         >
-          <ImProfile className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-900" />
+          <ImProfile className="w-4 h-4 md:w-5 md:h-5 text-bunker-gray-100" />
         </a>
       </div>
       {toggleNavMenu && (
         <>
           <div className="absolute w-64 sm:w-72 lg:w-80 bg-bunker-gray-900 bg-opacity-80 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-8 md:p-10 rounded-xl z-50">
-            <FaRegWindowClose
-              className="w-5 h-5 mb-5 text-bunker-gray-50 cursor-pointer"
+            <MdClose
+              className="w-5 h-5 mb-5 text-zinc-100 cursor-pointer"
               onClick={() => setToggleNavMenu(!toggleNavMenu)}
             />
             <Logo />

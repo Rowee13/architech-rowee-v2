@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 const HomeModal = ({ handleClose }) => {
   return (
-    <div className="flex absolute inset-0 justify-center items-center h-screen font-outfit text-bunker-gray-800">
+    <div className="flex absolute inset-0 justify-center items-center h-screen font-outfit text-bunker-gray-800 transition-all duration-300 ease-in-out delay-200">
       <div className="flex flex-col justify-center items-start sm:items-end relative w-full md:w-9/12 lg:w-7/12 xl:w-5/12 mx-5 px-6 pt-6 pb-16 bg-white rounded-xl z-[100] bg-smiley-3d bg-cover bg-right md:bg-left">
         <MdOutlineClose
           className="w-7 h-7 cursor-pointer"
