@@ -62,15 +62,17 @@ const Header = () => {
   return (
     <header>
       <div className="flex flex-row items-center justify-between relative top-0 mx-2 lg:mx-16 xl:mx-28 mt-5 h-16 md:h-24 bg-bunker-gray-900 bg-opacity-60 rounded-xl border border-bunker-gray-400 z-30">
-        <div className="flex flex-row items-center text-whisper-white">
+        <div
+          className={`flex flex-row items-center text-whisper-white ${
+            toggleNavMenu ? "opacity-0" : "opacity-100"
+          }`}
+        >
           <button onClick={handleToggleNavMenu}>
             <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8 text-riptide-accent" />
           </button>
           <Link
             to="/"
-            className={`font-oswald font-bold uppercase text-base md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright ${
-              toggleNavMenu ? "opacity-0" : "opacity-100"
-            }`}
+            className="font-oswald font-bold uppercase text-base md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright"
           >
             ArchitechRowee
           </Link>
@@ -88,11 +90,13 @@ const Header = () => {
       </div>
       {toggleNavMenu && (
         <>
-          <div className="absolute w-64 sm:w-72 lg:w-80 bg-bunker-gray-900 bg-opacity-80 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-8 md:p-10 rounded-xl z-50">
-            <MdClose
-              className="w-5 h-5 mb-5 text-zinc-100 cursor-pointer"
-              onClick={() => setToggleNavMenu(!toggleNavMenu)}
-            />
+          <div className="absolute w-64 xs:w-72 sm:w-80 bg-bunker-gray-900 bg-opacity-80 border border-riptide-accent shadow-card-shadow top-24 md:top-32 left-2 lg:left-16 xl:left-28 p-8 md:p-10 rounded-xl z-50">
+            <div className="flex justify-center items-center w-8 h-8 mb-5 border border-bunker-gray-900 rounded-md text-zinc-100 hover:text-riptide-accent hover:border-riptide-accent cursor-pointer">
+              <MdClose
+                className="w-5 h-5"
+                onClick={() => setToggleNavMenu(!toggleNavMenu)}
+              />
+            </div>
             <Logo />
             <NavLinks />
           </div>

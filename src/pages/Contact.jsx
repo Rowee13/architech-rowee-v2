@@ -70,15 +70,15 @@ const Contact = () => {
   return (
     <Layout>
       <div className="flex flex-col justify-start items-center h-full font-outfit text-whisper-white">
-        <header className="flex flex-col justify-between items-center pb-28 w-full lg:w-7/12 h-full">
-          <h1 className="text-3xl md:text-4xl font-bold pb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright">
+        <header className="flex flex-col justify-between items-center pb-28 w-full md:w-9/12 lg:w-7/12 h-full">
+          <h1 className="text-2xl md:text-4xl font-bold pb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright">
             "{getQuote.text}"
           </h1>
           <p className="text-zinc-400 text-center">- {getQuote.from}</p>
           <img src={patternDivider} alt="divider" className="pt-10" />
           <button
             onClick={getNewQuote}
-            className="btn mt-10 w-10/12 lg:w-4/12 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:shadow-navcontainer-shadow hover:border-0 hover:text-bunker-gray-900"
+            className="btn mt-10 w-10/12 md:w-4/12 border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:shadow-navcontainer-shadow hover:border-0 hover:text-bunker-gray-900"
           >
             Get new quote
           </button>
@@ -89,10 +89,10 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row justify-start items-start w-full h-full">
           {/* === social links === */}
           <div className="w-full lg:w-6/12 pb-10">
-            <h3 className="font-bold text-xl lg:text-3xl text-whisper-white">
+            <h3 className="font-bold text-xl lg:text-3xl text-whisper-white text-center md:text-left">
               Feel free to reach out thru socials
             </h3>
-            <div className="grid xl:grid-rows-3 xl:grid-flow-col grid-rows-contact-grid gap-4 gap-x-7 justify-start pt-5">
+            <div className="grid xl:grid-rows-3 xl:grid-flow-col grid-rows-contact-grid gap-4 gap-x-7 justify-center md:justify-start pt-5">
               <a
                 href="https://www.facebook.com/rowee13/"
                 aria-label="messenger"
@@ -165,8 +165,8 @@ const Contact = () => {
           </div>
 
           {/* === contact form === */}
-          <div className="w-full lg:w-6/12">
-            <h1 className="font-bold text-xl lg:text-3xl">
+          <div className="w-full lg:w-6/12 pt-10 md:pt-0">
+            <h1 className="font-bold text-xl lg:text-3xl text-center md:text-left">
               or fill out the form below
             </h1>
             {!isFormSubmitted ? (
@@ -272,7 +272,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   value="Send"
-                  className="bg-bunker-gray-800 w-full sm:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 transition-all ease-in-out duration-150"
+                  className="bg-bunker-gray-800 w-full md:w-52 py-3 mt-3 font-bold text-lg text-whisper-white rounded-md border border-bunker-gray-400 hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-800 transition-all ease-in-out duration-150"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
