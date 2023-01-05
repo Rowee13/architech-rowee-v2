@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Layout from "../../components/Layout";
 
 //----------------------------------------------------------
@@ -17,6 +19,15 @@ const Projects = () => {
           </p>
         </header>
         <div className="border-b border-zinc-500 w-full h-10" />
+        <main className="flex flex-col items-center pt-40">
+          <h1 className="text-xl">
+            There's nothing published yet. For now, please go to my playground.
+            Click{" "}
+            <Link to="/my-playground" className="text-riptide-accent underline">
+              here.
+            </Link>{" "}
+          </h1>
+        </main>
       </div>
     </Layout>
   );

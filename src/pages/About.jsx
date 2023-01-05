@@ -47,21 +47,22 @@ const About = () => {
             of my idea. Then I explore no-code tools using WordPress with
             Elementor and Webflow. Eventually, in January 2021, I decided to
             bring it to the next level to achieve my goal, and that's why I
-            learned programming. While working as a part-time instructor in
-            architecture, I am teaching myself about software development and
-            how cloud architecture works.
+            started learning programming. While working as a part-time
+            instructor in architecture, I am teaching myself about software
+            development and how cloud architecture works.
           </p>
           <p className="font-lato text-justify pb-2">
             Now, I am on the journey of pursuing software development in the
-            hopes of still building my ideas in 2018. I built this personal
+            hopes of still building my ideas in 2019. I built this personal
             website to showcase my skills and also to serve as my online
             playground. 😁
           </p>
           <p className="font-lato text-justify pb-2">
-            My focus right now is improving front-end development using React
-            and React Native and the use of frameworks for styling like SASS,
-            styled-components, and TailwindCSS. On the side, I am also learning
-            Python and ThreeJS.
+            My focus right now is improving my front-end development skills
+            using React and React Native and the use of frameworks for styling
+            like SASS, styled-components, and TailwindCSS. This website is built
+            using React, React Router, and Tailwind CSS. On the side, I am also
+            learning Python and ThreeJS.
           </p>
           <p className="font-lato text-justify pb-2">
             Most of my time in the first year of learning programming was spent
@@ -84,10 +85,10 @@ const About = () => {
           <h1 className="font-oswald text-3xl uppercase font-semibold pb-5">
             Tech Stack
           </h1>
-          <h4 className="font-lato font-semibold text-zinc-400 pb-2">
-            Frontend
-          </h4>
           <div>
+            <h4 className="font-lato font-semibold text-zinc-400 pb-2">
+              Frontend
+            </h4>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
               <Tooltip tooltipContent={<SkillRating value="6" tech="HTML" />}>
                 <img
@@ -173,10 +174,10 @@ const About = () => {
               </Tooltip>
             </div>
           </div>
-          <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
-            Backend
-          </h4>
           <div>
+            <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
+              Backend
+            </h4>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
               <Tooltip tooltipContent={<SkillRating value="3" tech="NodeJS" />}>
                 <img
@@ -210,10 +211,10 @@ const About = () => {
               </Tooltip>
             </div>
           </div>
-          <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
-            Database
-          </h4>
           <div>
+            <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
+              Database
+            </h4>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2">
               <Tooltip
                 tooltipContent={<SkillRating value="4" tech="MongoDB" />}
@@ -226,10 +227,10 @@ const About = () => {
               </Tooltip>
             </div>
           </div>
-          <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
-            Design
-          </h4>
           <div>
+            <h4 className="font-lato font-semibold text-zinc-400 pb-2 pt-5">
+              Design
+            </h4>
             <div className="flex flex-row flex-wrap gap-4 items-center pb-2 z-0">
               <Tooltip tooltipContent={<SkillRating value="7" tech="Figma" />}>
                 <img
@@ -259,6 +260,17 @@ const About = () => {
                 />
               </Tooltip>
             </div>
+          </div>
+          <div className="font-lato pt-10">
+            <h4 className="font-semibold text-xl pb-6 w-9/12">
+              Aside from improving on these technologies, I am also interested
+              in learning about...
+            </h4>
+            <ul className="text-zinc-400">
+              <li>Microservices Architecture</li>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
+            </ul>
           </div>
         </div>
       </div>

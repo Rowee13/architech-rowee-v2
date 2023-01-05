@@ -20,6 +20,9 @@ const PlaygroundACard = ({ link, workImg, workTitle, workDescription }) => {
       </div>
       <a
         href={link}
+        aria-label={workTitle}
+        target="_blank"
+        rel="noreferrer noopener"
         className="text-center text-riptide-accent w-full xs:w-5/12 py-2 xs:py-3 mt-10 mb-4 rounded-lg uppercase font-black bg-bunker-gray-800 border border-riptide-accent hover:bg-gradient-to-r from-riptide-accent to-riptide-bright hover:text-bunker-gray-900 cursor-pointer"
       >
         view

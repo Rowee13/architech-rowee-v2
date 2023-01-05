@@ -35,9 +35,9 @@ const NavLinks = ({ handleClick }) => (
         to={item.to}
         className={({ isActive }) => {
           return (
-            "flex flex-col justify-center items-start px-6 my-2 font-shortstack w-full h-11 text-sm md:text-base rounded hover:border-riptide-accent hover:border hover:shadow-nav-shadow hover:bg-riptide-accent hover:bg-opacity-50 hover:transition-all hover:ease-in hover:duration-200 " +
+            "flex flex-col justify-center items-start px-6 my-2 font-outfit w-full h-11 text-sm md:text-base rounded border border-bunker-gray-700 hover:border-riptide-accent hover:border hover:shadow-nav-shadow hover:bg-riptide-accent hover:bg-opacity-50 hover:transition-all hover:ease-in hover:duration-200 " +
             (isActive
-              ? "bg-gradient-to-r from-riptide-accent to-riptide-bright text-bunker-gray-800"
+              ? "bg-gradient-to-r from-riptide-accent to-riptide-bright text-bunker-gray-800 hover:bg-transparent hover:bg-opacity-0 hover:shadow-none hover:border-0"
               : "bg-bunker-gray-700 text-whisper-white")
           );
         }}
@@ -48,8 +48,6 @@ const NavLinks = ({ handleClick }) => (
     ))}
   </nav>
 );
-
-console.log(<NavLinks />);
 
 const Header = () => {
   const [toggleNavMenu, setToggleNavMenu] = useState(false);
@@ -68,11 +66,11 @@ const Header = () => {
           }`}
         >
           <button onClick={handleToggleNavMenu}>
-            <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8 text-riptide-accent" />
+            <IoMenu className="w-5 h-5 md:w-7 md:h-7 m-5 lg:m-8 text-riptide-accent hover:text-riptide-bright" />
           </button>
           <Link
             to="/"
-            className="font-oswald font-bold uppercase text-base md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright"
+            className="font-oswald font-bold uppercase text-base md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-riptide-accent to-riptide-bright hover:bg-gradient-to-l"
           >
             ArchitechRowee
           </Link>
