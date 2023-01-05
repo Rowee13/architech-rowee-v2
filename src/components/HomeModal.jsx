@@ -4,17 +4,17 @@ import { MdOutlineClose } from "react-icons/md";
 
 const HomeModal = ({ handleClose }) => {
   return (
-    <div className="flex absolute inset-0 justify-center items-center h-full font-outfit text-bunker-gray-800 transition-all duration-300 ease-in-out delay-200">
-      <div className="flex flex-col justify-center items-start sm:items-end relative w-full md:w-9/12 lg:w-7/12 xl:w-5/12 mx-5 px-6 pt-6 pb-16 bg-white rounded-xl z-[100] bg-smiley-3d bg-cover bg-right md:bg-left">
+    <div className="flex absolute inset-0 justify-center items-start h-full font-outfit text-bunker-gray-800 transition-all duration-300 ease-in-out delay-200">
+      <div className="flex flex-col justify-center items-start sm:items-end relative w-full md:w-9/12 lg:w-7/12 xl:w-5/12 mx-5 px-6 pt-6 pb-16 mt-60 bg-white rounded-xl bg-smiley-3d bg-cover bg-right md:bg-left z-[100]">
         <MdOutlineClose
           className="w-7 h-7 cursor-pointer"
           onClick={handleClose}
         />
         <div className="w-5/6 md:w-3/6 pb-28 lg:pb-10">
-          <h1 className="text-3xl font-bold text-left sm:text-right pt-3">
+          <h1 className="text-xl xs:text-3xl font-bold text-left sm:text-right pt-3">
             Welcome to my personal website
           </h1>
-          <p className="text-left sm:text-right pt-3 pb-10">
+          <p className="text-xs xs:text-base text-left sm:text-right pt-3 pb-10">
             Thank you for visiting!
             <br />
             Please note that my homepage is still under development, so it is
@@ -31,7 +31,10 @@ const HomeModal = ({ handleClose }) => {
           Image by Freepik
         </a>
       </div>
-      <div className="absolute inset-0 bg-bunker-gray-900 bg-opacity-60 z-40" />
+      <div
+        className="inline-flex absolute w-full h-full bg-bunker-gray-900 bg-opacity-70 z-40"
+        onClick={handleClose}
+      />
     </div>
   );
 };
